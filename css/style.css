@@ -767,7 +767,7 @@ input::-webkit-inner-spin-button {
       opacity: 1; }
 
 .audio-recording {
-  background: #FFF;
+  background: #EDE7FB;
   border-radius: 8px;
   padding: 8px 16px; }
   .audio-recording.orange #recordTimeDisplay .limit {
