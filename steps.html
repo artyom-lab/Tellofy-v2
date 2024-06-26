@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+    <title>Tellofy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css">
+    <link rel="stylesheet" href="libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.1/video-js.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/videojs-record/2.0.6/css/videojs.record.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="progress-line"></div>
+  <div class="header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col col-lg-2">
+          <a href="#!" class="logo">
+            <img src="img/Logo.svg" alt="">
+          </a>
+        </div>
+        <div class="col-auto col-lg">
+          <a href="#!" class="brand row row-6 align-items-center">
+            <div class="col-auto order-2 order-lg-1">
+              <img src="img/brand.svg" alt="">
+            </div>
+            <div class="col-auto order-1 order-lg-2">Shine’s Bakery</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-section container">
+      <div class="row flex-grow-1">
+        <div class="col-2 d-none d-lg-block"></div>
+        <div class="col steps">
+
+          <form class="form-steps step-1" id="form1" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-xl-10">
+                  <div class="mb-5 pb-4 pb-xl-5">
+                    <h1>Shine’s Bakery</h1>
+                    <div class="h1-comment">your feedback helps us very much</div>
+                  </div>
+                  <section>
+                    <h3><span class="number">1</span>How likely are you to recommend us to a friend or a colleague?</h3>
+                    <div class="likely-box">
+                      <label class="radio-group">
+                        <span class="likely-link">Not Likely</span>
+                        <input type="radio" name="number" value="0">
+                        <span>0</span>
+                      </label>
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="1">
+                        <span>1</span>
+                      </label>       
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="2">
+                        <span>2</span>
+                      </label>               
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="3">
+                        <span>3</span>
+                      </label>               
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="4">
+                        <span>4</span>
+                      </label>                   
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="5">
+                        <span>5</span>
+                      </label>     
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="6">
+                        <span>6</span>
+                      </label>              
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="7">
+                        <span>7</span>
+                      </label>        
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="8">
+                        <span>8</span>
+                      </label>     
+                      <label class="radio-group">
+                        <input type="radio" name="number" value="2">
+                        <span>9</span>
+                      </label>
+                      <label class="radio-group">
+                        <span class="likely-link link-right">Most Likely</span>
+                        <input type="radio" name="number" value="10">
+                        <span>10</span>
+                      </label>          
+                    </div>  
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <button class="btn btn-next" id="tostep-2" disabled>Next</button>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">1 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <button class="arrow disabled" id="tostep-2b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-2" id="form2" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">2</span>Please tell us a bit more about your choice of score.</h3>
+                    <div class="textarea-box">
+                      <div class="position-relative mb-3">
+                        <textarea type="text" class="form-control form-textarea"  placeholder="Please type your comments, or use mic option below to speak about your experience, along with video and pictures to provide your feedback." id="count-1000" maxlength="1000"></textarea>
+                        <div id="the-count-1000" class="the-count-1000">
+                          <span id="current-1000">0</span><span id="maximum-1000">/1000</span>
+                        </div>
+                        <div class="generated d-none">
+                          <img src="img/generated.svg" alt="">
+                          <span class="ms-1">Speech to Text Generated by AI</span>
+                        </div>
+                      </div>
+                      <div class="message">You have a total of 2:00 of recording</div>
+
+                      <div class="audio-buttons">
+                        <div class="row row-8 align-items-center justify-content-between">
+                          <div class="col-auto mb-2">
+                            <a href="#!" class="btn btn-next audio-to-text">
+                              <svg class="me-2 align-middle" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 0L12.7125 1.71875L11 2.5L12.7125 3.2875L13.5 5L14.2812 3.2875L16 2.5L14.2812 1.71875L13.5 0ZM6.58203 8.75065C6.97092 9.13954 7.44314 9.33398 7.9987 9.33398C8.55425 9.33398 9.02648 9.13954 9.41536 8.75065C9.80425 8.36176 9.9987 7.88954 9.9987 7.33398V3.33398C9.9987 2.77843 9.80425 2.30621 9.41536 1.91732C9.02648 1.52843 8.55425 1.33398 7.9987 1.33398C7.44314 1.33398 6.97092 1.52843 6.58203 1.91732C6.19314 2.30621 5.9987 2.77843 5.9987 3.33398V7.33398C5.9987 7.88954 6.19314 8.36176 6.58203 8.75065ZM7.33203 11.9507V14.0007H8.66536V11.9507C9.82092 11.7951 10.7765 11.2784 11.532 10.4007C12.2876 9.52287 12.6654 8.50065 12.6654 7.33398H11.332C11.332 8.25621 11.007 9.04232 10.357 9.69232C9.70703 10.3423 8.92092 10.6673 7.9987 10.6673C7.07648 10.6673 6.29036 10.3423 5.64036 9.69232C4.99036 9.04232 4.66536 8.25621 4.66536 7.33398H3.33203C3.33203 8.50065 3.70981 9.52287 4.46536 10.4007C5.22092 11.2784 6.17648 11.7951 7.33203 11.9507Z" fill="#FFF"/>
+                              </svg>
+                              <span class="align-middle">Speech to Text</span>
+                            </a>
+                          </div>
+                          <div class="col-auto mb-2">
+                            <div class="dropdown dropdown-media">
+                              <a class="dropdown-toggle" href="#!" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                <span class="align-middle">Attach Media</span>
+                                <svg class="align-middle ms-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M7.33331 11.3333H8.66665V8.66658H11.3333V7.33325H8.66665V4.66658H7.33331V7.33325H4.66665V8.66658H7.33331V11.3333ZM7.99998 14.6666C7.07776 14.6666 6.21109 14.4916 5.39998 14.1416C4.58887 13.7916 3.88331 13.3166 3.28331 12.7166C2.68331 12.1166 2.20831 11.411 1.85831 10.5999C1.50831 9.78881 1.33331 8.92214 1.33331 7.99992C1.33331 7.0777 1.50831 6.21103 1.85831 5.39992C2.20831 4.58881 2.68331 3.88325 3.28331 3.28325C3.88331 2.68325 4.58887 2.20825 5.39998 1.85825C6.21109 1.50825 7.07776 1.33325 7.99998 1.33325C8.9222 1.33325 9.78887 1.50825 10.6 1.85825C11.4111 2.20825 12.1166 2.68325 12.7166 3.28325C13.3166 3.88325 13.7916 4.58881 14.1416 5.39992C14.4916 6.21103 14.6666 7.0777 14.6666 7.99992C14.6666 8.92214 14.4916 9.78881 14.1416 10.5999C13.7916 11.411 13.3166 12.1166 12.7166 12.7166C12.1166 13.3166 11.4111 13.7916 10.6 14.1416C9.78887 14.4916 8.9222 14.6666 7.99998 14.6666Z" fill="#6539D9"/>
+                                </svg>
+                              </a>
+                              <div class="dropdown-menu">
+                                <a href="#!" class="dropdown-item image-to">Images</a>
+                                <a href="#!" class="dropdown-item video-to">Video</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="audio-recording d-none">
+                      <div class="audiorecorder row row-6 align-items-center justify-content-between mb-2">
+                        <div class="col-auto order-2 order-sm-1 fz-0">
+                          <a href="#!" class="btn-delete">
+                            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.8335 15.5C2.37516 15.5 1.9828 15.3368 1.65641 15.0104C1.33002 14.684 1.16683 14.2917 1.16683 13.8333V3H0.333496V1.33333H4.50016V0.5H9.50016V1.33333H13.6668V3H12.8335V13.8333C12.8335 14.2917 12.6703 14.684 12.3439 15.0104C12.0175 15.3368 11.6252 15.5 11.1668 15.5H2.8335ZM4.50016 12.1667H6.16683V4.66667H4.50016V12.1667ZM7.8335 12.1667H9.50016V4.66667H7.8335V12.1667Z" fill="#AF91FF"/>
+                            </svg>
+                          </a>  
+                        </div>
+                        <div class="col-12 order-1 order-sm-2 col-sm mb-2 mb-sm-0">
+                          <div class="row row-6 align-items-center">
+                            <div class="col-auto">
+                              <a href="#!" id="playPauseBtn" class="btn-play" style="display: none;" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Play Recording" data-bs-custom-class="my-tooltip">
+                                <img src="img/play-violet.svg" alt="">
+                              </a>
+                            </div>
+                            <div class="col fz-0">
+                              <div id="waveform" style="display: none;"></div>
+                              <input type="range" class="range" id="positionSlider" min="0" max="100" step="1" value="0">
+                            </div>
+                            <div class="col-auto">
+                              <div id="timeDisplay">
+                                <span id="recordTimeDisplay"><span>0:00</span><span class="limit">/2:00</span></span>
+                                <span id="playTimeDisplay" style="display: none;"><span>0:00</span>/0:00</span>
+                              </div>
+                            </div>
+                          </div> 
+                        </div>
+                        <div class="col-auto order-3 fz-0">
+                          <a href="#!" id="recordBtn" class="btn-record">
+                            <img src="img/record.svg" alt="">
+                          </a>
+                        </div>
+                        <div class="col-auto order-4 fz-0">
+                          <a href="#!" class="btn-transform" data-bs-toggle="modal" data-bs-target="#modalaudio">
+                            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 13.6668V8.66683L7.16667 7.00016L0.5 5.3335V0.333496L16.3333 7.00016L0.5 13.6668Z" fill="#6539D9"/>
+                            </svg>
+                          </a>  
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="video-recording d-none">
+                      <video id="myVideo" class="video-js vjs-default-skin" controls="true" preload="auto"></video>
+                      <a href="#!" class="video-delete">
+                        <svg width="13" height="15" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M3.00018 18C2.45018 18 1.97935 17.8042 1.58768 17.4125C1.19602 17.0208 1.00018 16.55 1.00018 16V3H0.000183105V1H5.00018V0H11.0002V1H16.0002V3H15.0002V16C15.0002 16.55 14.8043 17.0208 14.4127 17.4125C14.021 17.8042 13.5502 18 13.0002 18H3.00018ZM5.00018 14H7.00018V5H5.00018V14ZM9.00018 14H11.0002V5H9.00018V14Z" fill="#AF91FF"/>
+                        </svg>
+                      </a>
+                    </div>
+
+                    <div class="images-uploading d-none">
+                      <div class="upload__box">
+                        <div class="row row-10 upload__img-wrap">
+                          <div class="col-6 col-sm-4 order-last">
+                            <div class="upload__btn-box">
+                              <div class="upload__btn">
+                                <div class="upload-img">
+                                  <img src="img/upload-photo.svg" alt="">
+                                </div>
+                                <input type="file" multiple="" data-max_length="20" class="upload__inputfile">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>    
+  
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-1">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-3" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">2 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-1b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-3b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-3" id="form3" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">3</span>What sort of a visit was this ?</h3>
+                    <div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="radio" name="sort">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Business</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="radio" name="sort">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Family</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="radio" name="sort">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Couple</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="radio" name="sort">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Friends</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="radio" name="sort">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Single</span>
+                        </label>
+                      </div>
+                    </div>        
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-2">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-4" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">3 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-2b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-4b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-4" id="form4" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">4</span>Select a date from our calendar</h3>
+                    <div class="form-group position-relative input-small">
+                      <input type="text" class="form-control input-text datepicker" placeholder="mm/dd/yyyy">
+                      <svg class="img-calendar" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3.33333 14.6673C2.96667 14.6673 2.65278 14.5368 2.39167 14.2757C2.13056 14.0145 2 13.7007 2 13.334V4.00065C2 3.63398 2.13056 3.3201 2.39167 3.05898C2.65278 2.79787 2.96667 2.66732 3.33333 2.66732H4V1.33398H5.33333V2.66732H10.6667V1.33398H12V2.66732H12.6667C13.0333 2.66732 13.3472 2.79787 13.6083 3.05898C13.8694 3.3201 14 3.63398 14 4.00065V13.334C14 13.7007 13.8694 14.0145 13.6083 14.2757C13.3472 14.5368 13.0333 14.6673 12.6667 14.6673H3.33333ZM3.33333 13.334H12.6667V6.66732H3.33333V13.334ZM3.33333 5.33398H12.6667V4.00065H3.33333V5.33398ZM8 9.33398C7.81111 9.33398 7.65278 9.2701 7.525 9.14232C7.39722 9.01454 7.33333 8.85621 7.33333 8.66732C7.33333 8.47843 7.39722 8.3201 7.525 8.19232C7.65278 8.06454 7.81111 8.00065 8 8.00065C8.18889 8.00065 8.34722 8.06454 8.475 8.19232C8.60278 8.3201 8.66667 8.47843 8.66667 8.66732C8.66667 8.85621 8.60278 9.01454 8.475 9.14232C8.34722 9.2701 8.18889 9.33398 8 9.33398ZM5.33333 9.33398C5.14444 9.33398 4.98611 9.2701 4.85833 9.14232C4.73056 9.01454 4.66667 8.85621 4.66667 8.66732C4.66667 8.47843 4.73056 8.3201 4.85833 8.19232C4.98611 8.06454 5.14444 8.00065 5.33333 8.00065C5.52222 8.00065 5.68056 8.06454 5.80833 8.19232C5.93611 8.3201 6 8.47843 6 8.66732C6 8.85621 5.93611 9.01454 5.80833 9.14232C5.68056 9.2701 5.52222 9.33398 5.33333 9.33398ZM10.6667 9.33398C10.4778 9.33398 10.3194 9.2701 10.1917 9.14232C10.0639 9.01454 10 8.85621 10 8.66732C10 8.47843 10.0639 8.3201 10.1917 8.19232C10.3194 8.06454 10.4778 8.00065 10.6667 8.00065C10.8556 8.00065 11.0139 8.06454 11.1417 8.19232C11.2694 8.3201 11.3333 8.47843 11.3333 8.66732C11.3333 8.85621 11.2694 9.01454 11.1417 9.14232C11.0139 9.2701 10.8556 9.33398 10.6667 9.33398ZM8 12.0007C7.81111 12.0007 7.65278 11.9368 7.525 11.809C7.39722 11.6812 7.33333 11.5229 7.33333 11.334C7.33333 11.1451 7.39722 10.9868 7.525 10.859C7.65278 10.7312 7.81111 10.6673 8 10.6673C8.18889 10.6673 8.34722 10.7312 8.475 10.859C8.60278 10.9868 8.66667 11.1451 8.66667 11.334C8.66667 11.5229 8.60278 11.6812 8.475 11.809C8.34722 11.9368 8.18889 12.0007 8 12.0007ZM5.33333 12.0007C5.14444 12.0007 4.98611 11.9368 4.85833 11.809C4.73056 11.6812 4.66667 11.5229 4.66667 11.334C4.66667 11.1451 4.73056 10.9868 4.85833 10.859C4.98611 10.7312 5.14444 10.6673 5.33333 10.6673C5.52222 10.6673 5.68056 10.7312 5.80833 10.859C5.93611 10.9868 6 11.1451 6 11.334C6 11.5229 5.93611 11.6812 5.80833 11.809C5.68056 11.9368 5.52222 12.0007 5.33333 12.0007ZM10.6667 12.0007C10.4778 12.0007 10.3194 11.9368 10.1917 11.809C10.0639 11.6812 10 11.5229 10 11.334C10 11.1451 10.0639 10.9868 10.1917 10.859C10.3194 10.7312 10.4778 10.6673 10.6667 10.6673C10.8556 10.6673 11.0139 10.7312 11.1417 10.859C11.2694 10.9868 11.3333 11.1451 11.3333 11.334C11.3333 11.5229 11.2694 11.6812 11.1417 11.809C11.0139 11.9368 10.8556 12.0007 10.6667 12.0007Z" fill="#AF91FF"/>
+                      </svg>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-3">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-5" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">4 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-3b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-5b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </buttona>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-5" id="form5" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">5</span>What sort of a visit was this ?</h3>
+                    <div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="checkbox" name="sort2">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Business</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="checkbox" name="sort2">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Family</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="checkbox" name="sort2">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Couple</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="checkbox" name="sort2">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Friends</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="label-store">       
+                          <input type="checkbox" name="sort2">
+                          <span class="align-middle f"></span>
+                          <span class="align-middle ms-1">Single</span>
+                        </label>
+                      </div>
+                    </div>        
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-4">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-6" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">5 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-4b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-6b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-6" id="form6" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">6</span>Are you a member of the community?</h3>
+                    <div class="select-box">
+                      <select class="select2" data-placeholder="Search or Select">
+                        <option></option>
+                        <option value="0">Yes</option>
+                        <option value="1">No</option>
+                        <option value="2">Maybe</option>
+                      </select>
+                    </div>  
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-5">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-7" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">6 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-5b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-7b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-7" id="form7" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-lg-9 col-xl-7">
+                  <section>
+                    <h3><span class="number">7</span>This is an example for a textfield.</h3>
+                    <div class="form-group input-small position-relative">
+                      <input type="text" class="form-control input-text" placeholder="ex. Value" minlength="10" maxlength="100" id="count-100" name="input1">
+                      <span id="the-count-100" class="the-count-100">
+                        <span id="current-100">0</span><span id="maximum-100">/100</span>
+                      </span>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a href="#!" class="btn btn-prev" id="backstep-6">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-8" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">7 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-6b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button class="arrow disabled" id="tostep-8b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <form class="form-steps step-8" id="form8" novalidate>
+            <div class="main-content">
+              <div class="row">
+                <div class="col-md-9 col-xl-4">
+                  <section>
+                    <h3><span class="number">8</span>Please contact form.</h3>
+                    <div class="form-group">
+                      <div class="label">Full Name *</div>
+                      <input type="text" class="form-control input-text" placeholder="" name="fullname">
+                    </div>
+                    <div class="form-group">
+                      <div class="label">Email Address *</div>
+                      <input type="email" class="form-control input-text" placeholder="" name="email">
+                    </div>
+                    <div class="form-group">
+                      <div class="label">Phone Number *</div>
+                      <input type="tel" name="phone" class="form-control input-text" placeholder="" id="phone" name="phone">
+                    </div>
+                    <div>
+                      <label class="label-store label-agreement">       
+                        <input type="checkbox" name="agree">
+                        <span class="align-middle f"></span>
+                        <span class="align-middle ms-1">I agree to the Data Policy and Terms of Use.</span>
+                      </label>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col-12 col-sm-auto mb-2 mb-sm-0">
+                        <div class="row row-8 align-items-center">
+                          <div class="col-auto d-sm-none">
+                            <a class="btn btn-prev" id="backstep-7">
+                              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12L0 6L6 0L7.4 1.4L2.8 6L7.4 10.6L6 12Z" fill="#AF91FF"/>
+                              </svg>
+                            </a>
+                          </div>
+                          <div class="col">
+                            <button class="btn btn-next" id="tostep-9" disabled>Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-auto">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">8 of 8</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow" id="backstep-7b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 2.19998L0.933333 5.26665L0 4.33331L4 0.333313L8 4.33331L7.06667 5.26665L4 2.19998Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                            <button  class="arrow disabled" id="tostep-9b">
+                              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5.26665L0 1.26665L0.933333 0.333313L4 3.39998L7.06667 0.333313L8 1.26665L4 5.26665Z" fill="#6539D9"/>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="step-9">
+            <div class="main-content">
+              <div class="row">
+                <div class="col-xl-8">
+                  <section>
+                    <div class="feedback-box">
+                      <img src="img/thankyou.svg" alt="">
+                    </div>
+                    <div class="title-feedback mt-4">Your feedback is very valuable for us!</div>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div class="footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col-2 d-none d-lg-block"></div>
+                  <div class="col">
+                    <div class="row align-items-center justify-content-between">
+                      <div class="col">
+                        <span class="copywright">powered by <a href="#!" class="link-brand">tellofy</a></span>
+                      </div>
+                      <div class="col-auto d-none d-sm-block">
+                        <div class="pagination-box">
+                          <span class="align-middle">Back to tellofy.com</span>
+                          <div class="arrows-box ms-3">
+                            <a href="#!" class="arrow">
+                              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.77996 4.66667L6.39329 7.06L7.33329 8L11.3333 4L7.33329 -2.91409e-07L6.39329 0.939999L8.77996 3.33333L0.666626 3.33333L0.666626 4.66667L8.77996 4.66667Z" fill="#6539D9"/>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <div class="modal modal-audio fade" id="modalaudio" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="icon-box">
+          <div class="icon-box-inside">
+            <img src="img/modal-mic.svg" alt="" width="64">
+          </div>
+        </div>
+        <h4>Audio to Text in progress</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-delete fade" id="confirmDeleteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="icon-box">
+          <div class="icon-box-inside">
+            <img src="img/delete-big.svg" alt="">
+          </div>
+        </div>
+        <h3 class="mb-2">Delete image</h3>
+        <p class="fz-14 mb-4">The existing text will be replaced, <br> are you sure you want to delete it?</p>
+        <div class="row row-8 align-items-center justify-content-between">
+          <div class="col col-sm-auto">
+            <button class="btn btn-next btn-block delete-image-btn">Yes, Delete</button>
+          </div>
+          <div class="col col-sm-auto">
+            <button class="btn btn-next btn-block btn-cancel" data-bs-dismiss="modal">No, Calcel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.1/video.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/6.1.1/adapter.min.js"></script>
+  <script src="https://cdn.WebRTC-Experiment.com/RecordRTC.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-record/2.0.6/videojs.record.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/audio.js"></script>
+
+</body>
+</html>
+

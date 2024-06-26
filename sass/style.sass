@@ -1,0 +1,1157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap')
+
+$transition: .3s
+
+$color-white: #FFF
+$color-body: #F2EDFF
+$color-violet: #6539D9
+$color-violet2: #440FCF
+$color-lightviolet: #AF91FF
+$color-lightviolet2: #EDE7FB
+$color-dark: #1D253F
+$color-count: #4E5778
+$color-placeholder: #838BAD
+$color-border: #C4C9D9
+$color-red: #FF3E4A
+$color-progress: #E1E5F0
+
+*
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+body 
+	font-family: 'Inter', sans-serif
+	background-color: $color-white
+	color: $color-dark
+	@media (min-width: 576px)
+		min-height: 100vh
+		display: flex 
+		flex-direction: column
+
+a 
+	text-decoration: none !important
+	transition: $transition
+	color: $color-dark
+	&:hover 
+		color: initial
+		opacity: .7
+
+.btn
+	&:focus
+		box-shadow: none
+
+.btn-block 
+	width: 100%
+
+.container 
+	@media (min-width: 1400px)
+		max-width: 1380px
+	@media (max-width: 575.98px)
+		padding-left: 20px
+		padding-right: 20px
+
+.row-6
+	margin-left: -6px
+	margin-right: -6px
+	> [class*='col']
+		padding-left: 6px
+		padding-right: 6px
+
+.row-8
+	margin-left: -8px
+	margin-right: -8px
+	> [class*='col']
+		padding-left: 8px
+		padding-right: 8px
+
+.row-10
+	margin-left: -10px
+	margin-right: -10px
+	> [class*='col']
+		padding-left: 10px
+		padding-right: 10px
+
+.form-group
+	margin-bottom: 16px
+
+.fz-0
+	font-size: 0px !important
+.fz-14
+	font-size: 14px !important
+
+.h1, h1
+	font-size: 56px
+	font-weight: 900
+	@media (max-width: 767.98px)
+		font-size: 44px
+
+.h1-comment
+	font-weight: bold
+
+.h3, h3
+	font-size: 20px
+	font-weight: bold
+	margin-bottom: 40px
+	position: relative
+	.number 
+		position: absolute
+		color: $color-violet
+		left: -25px
+		@media (max-width: 767.98px)
+			left: 0
+			top: -30px
+
+.h4, h4
+	font-size: 16px
+	font-weight: bold
+
+.progress-line
+	background: $color-progress
+	height: 4px
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 1030
+	transition: $transition
+	&:before 
+		content: ""
+		position: absolute 
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: $color-violet2
+		width: 11%
+		transition: $transition
+
+.header
+	padding: 16px 0
+	margin-bottom: 24px
+	position: fixed
+	top: 4px
+	left: 0
+	right: 0
+	background: $color-white
+	z-index: 1030
+	.logo 
+		img 
+			width: 75px
+			@media (max-width: 575.98px)
+				width: 62px
+	.brand
+		display: inline-flex
+		font-weight: bold 
+		@media (max-width: 575.98px)
+			font-size: 14px
+		img 
+			width: 32px
+
+.main-section
+	display: flex 
+	flex-direction: column
+	flex-grow: 1
+	position: relative
+	z-index: 1000
+
+.steps
+	display: flex 
+	flex-direction: column
+	position: relative
+	z-index: 1030
+	.step-1
+		display: flex
+	> [class*='step']
+		flex-direction: column
+		flex-grow: 1
+
+.main-content
+	padding: 120px 0 
+	@media (min-width: 1980px)
+		margin-top: auto
+		margin-bottom: auto
+
+.likely-box
+	display: flex
+	margin-bottom: 48px
+	@media (max-width: 767.98px)
+		justify-content: center
+	.radio-group
+		display: inline-block
+		font-size: 14px
+		position: relative
+		&:not(:last-child)
+			@media (min-width: 768px)
+				margin-right: 18px
+		@media (max-width: 575.98px)
+			flex-grow: 1
+		input
+			display: none
+			~ span
+				padding: 4px
+				display: inline-block
+				width: 36px
+				height: 36px
+				border: 1px solid $color-violet
+				border-radius: 8px
+				text-align: center
+				line-height: 28px
+				color: $color-violet
+				cursor: pointer
+				@media (max-width: 767.98px)
+					border-radius: 0
+				@media (max-width: 575.98px)
+					width: 100%
+					padding: 2px
+					font-size: 12px
+			&:checked, &:hover
+				~ span
+					transition: $transition
+					background: $color-violet
+					font-weight: bold
+					color: $color-white
+		@media (max-width: 767.98px)
+			&:first-child
+				span
+					border-radius: 6px 0 0 6px
+			&:last-child
+				span
+					border-radius: 0 6px 6px 0
+			&:not(:last-child)
+				span
+					border-right: 0
+
+.likely-link
+	position: absolute
+	bottom: -36px
+	cursor: pointer
+	white-space: nowrap
+	color: $color-count
+	&.link-right
+		right: 0
+
+.footer
+	margin-top: 24px
+	position: fixed 
+	bottom: 0
+	right: 0
+	left: 0
+	padding: 20px 0 48px
+	text-align: center
+	background: $color-white
+	@media (max-width: 991.98px)
+		padding: 20px 0
+
+.pagination-box
+	font-size: 14px
+	.arrows-box
+		display: inline-block
+		vertical-align: middle
+		.arrow
+			display: inline-block
+			background: $color-white
+			border-radius: 8px
+			width: 24px
+			height: 24px
+			text-align: center
+			padding: 4px 
+			background: $color-white
+			border: 1px solid $color-lightviolet
+			transition: $transition
+			line-height: 14px
+			&:hover
+				background: $color-violet2
+				opacity: 1 
+				svg path
+					fill: $color-white
+			&.disabled 
+				opacity: .6
+				pointer-events: none
+
+.btn-next
+	color: $color-white
+	background: $color-violet
+	border: 0
+	padding: 10px 34px
+	transition: $transition
+	font-size: 14px
+	border-radius: 8px
+	text-align: center
+	font-weight: bold
+	@media (max-width: 575.98px)
+		width: 100%
+	&:hover, &:active
+		opacity: 1
+		color: $color-white !important
+		background: $color-violet2 !important
+	&:disabled
+		background: $color-border !important
+		color: rgba(255, 255, 255, 0.6) !important
+	&.audio-to-text
+		padding: 10px 16px
+		line-height: 22px
+		svg path 
+			fill: $color-white !important
+	&.delete-image-btn
+		padding: 10px 16px
+	&.btn-cancel
+		padding: 10px 16px
+		border: 1px solid $color-violet
+		background: $color-white
+		color: $color-dark
+		font-weight: normal
+		&:hover
+			opacity: 1
+			color: $color-white !important
+			background: $color-violet2 !important
+
+.btn-prev
+	border: 1px solid $color-lightviolet
+	padding: 7.5px
+	transition: $transition
+	border-radius: 8px
+	width: 41px
+	height: 41px
+	line-height: 24px
+	text-align: center
+	font-size: 0
+	&:hover, &:active
+		opacity: 1
+		color: $color-white !important
+		border-color: $color-violet2 !important
+		background: $color-violet2 !important
+		svg path 
+			fill: $color-white
+
+.copywright
+	font-size: 14px
+	color: $color-count
+	@media (max-width: 575.98px)
+		font-size: 12px
+	.link-brand
+		color: $color-violet2
+
+.form-textarea 
+	height: 220px !important
+	resize: none
+	background: $color-white
+	border-radius: 8px
+	color: $color-dark
+	border: 1px solid $color-placeholder
+	font-size: 14px
+	padding: 12px 16px 48px
+	&::-webkit-input-placeholder
+		color: $color-placeholder
+	&::-moz-placeholder
+		color: $color-placeholder
+	&:-ms-input-placeholder
+		color: $color-placeholder
+	&:focus
+		box-shadow: 0 0 0 .25rem rgba(68, 15, 207,.1)
+		border-color: $color-placeholder
+
+.generated
+	font-size: 12px
+	color: $color-placeholder
+	position: absolute
+	bottom: 12px
+	left: 16px
+	img, span 
+		vertical-align: middle
+
+.the-count-1000
+	position: absolute
+	color: $color-border
+	bottom: 12px
+	right: 16px
+	display: inline-block
+	font-size: 12px
+	transition: $transition
+
+.the-count-100
+	color: $color-count
+	font-size: 12px
+	text-align: right
+	position: absolute
+	right: 0
+	top: 44px
+
+.label-store
+	margin-bottom: 14px
+	font-size: 14px
+	color: $color-count
+	cursor: pointer
+
+.label-agreement
+	color: $color-dark
+
+input[type="checkbox"], input[type="radio"]
+	display: none
+	~ .f
+		display: inline-block
+		width: 16px
+		height: 16px
+		cursor: pointer
+		border: 1px solid $color-placeholder
+		border-radius: 100px
+		position: relative
+	&:checked
+		~ .f
+			transition: $transition
+			background: $color-violet
+			border-color: $color-violet
+			color: $color-violet
+			&:before 
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+			~ span 
+				font-weight: bold
+
+input[type="radio"]
+	&:checked
+		~ .f
+			&:before 
+				width: 7px	
+				height: 7px
+				background: $color-white
+				border-radius: 100px
+
+input[type="checkbox"]
+	~ .f
+		border-radius: 4px
+	&:checked
+		~ .f
+			&:before 
+				width: 16px
+				height: 16px
+				background-image: url(../img/check.svg)
+				background-position: center center
+				background-repeat: no-repeat
+
+.input-text
+	font-size: 14px
+	padding: 8px 16px
+	border: 1px solid $color-placeholder
+	border-radius: 8px
+	height: 40px
+	color: $color-dark
+	&::-webkit-input-placeholder
+		color: #7C85A6
+	&::-moz-placeholder
+		color: #7C85A6
+	&:-ms-input-placeholder
+		color: #7C85A6
+	&:focus
+		box-shadow: 0 0 0 .25rem rgba(68, 15, 207,.1)
+		border-color: $color-placeholder
+	&.error
+		border-color: $color-red
+
+.label
+	font-size: 12px
+	color: $color-placeholder
+	margin-bottom: 8px
+
+.input-small
+	@media (min-width: 576px)
+		max-width: 280px
+
+.datepicker
+	padding: 8px 16px 8px 30px
+	cursor: pointer
+	&:focus
+		~ svg path 
+			fill: $color-dark
+
+.img-calendar
+	position: absolute 
+	top: 50%
+	left: 8px
+	transform: translateY(-50%)
+	pointer-events: none
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+input[type=number] 
+	-moz-appearance:textfield
+
+.title-feedback
+	font-weight: 900
+	font-size: 56px
+	color: $color-dark
+	line-height: 1.2
+	@media (max-width: 767.98px)
+		font-size: 32px
+		text-align: center
+
+.feedback-box
+	@media (max-width: 767.98px)
+		text-align: center
+
+// CALENDAR
+
+.ui-widget
+	font-family: inherit
+	input, select, textarea, button
+		font-family: inherit
+
+.ui-widget-content
+	border-color: $color-placeholder !important
+	border-radius: 8px
+	padding: 16px
+	min-width: 280px
+	@media (max-width: 575.98px)
+		width: calc(100% - 40px)
+
+.ui-datepicker
+	.ui-state-default
+		font-size: 14px
+		background: none
+		border: none
+		&:hover
+			color: $color-white !important
+			background-color: $color-violet
+			font-weight: bold
+			opacity: 1
+	td
+		span, a
+			width: 30px
+			height: 30px
+			padding: 0
+			line-height: 30px
+			border-radius: 5px
+			text-align: center
+	.ui-state-active
+		color: $color-white !important
+		background-color: $color-violet
+		font-weight: bold
+		box-shadow: 0 0 0 .25rem rgba(68, 15, 207,.1)
+	.ui-state-highlight
+		color: $color-dark !important
+		background-color: $color-white
+		border: 1px solid $color-violet
+		font-weight: bold
+	.ui-datepicker-buttonpane
+		margin: 0
+		button
+			margin: .5em .2em
+			padding: .2em .3em
+			transition: $transition
+	.ui-datepicker-title 
+		line-height: inherit
+		select
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			font-size: 14px
+			margin: 1px 0
+			font-weight: bold
+			border: 0
+			height: 26px
+			padding: 1px 10px
+			cursor: pointer
+			width: auto
+			line-height: 1
+			background-position: calc(100% - 7px) center
+			background-size: 7px
+			&::-ms-expand
+				display: none
+
+.ui-datepicker-header
+	border: none
+	border-radius: 0
+	background: none
+
+.ui-datepicker-calendar
+	thead 
+		th 
+			color: $color-placeholder !important
+			font-weight: normal !important
+
+.ui-datepicker-prev, .ui-datepicker-next
+	top: 50% !important
+	transform: translateY(-50%)
+	border: none !important
+	background: none !important
+	cursor: pointer
+	span
+		background: none !important
+		font-size: 12px
+		transition: $transition
+		width: 6px
+		height: 10px
+		margin: 0 !important
+		transform: translate(-50%, -50%) !important
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+			background-size: cover 
+			background-position: center center
+			background-repeat: no-repeat
+
+
+.ui-datepicker-prev
+	span:before
+		background-image: url(../img/calendar-left.svg)
+	&:hover span
+		transform: translateX(-2px)
+.ui-datepicker-next
+	span:before
+		background-image: url(../img/calendar-right.svg)
+	&:hover span
+		transform: translateX(2px)
+
+// SELECT2
+
+.select2-container
+	display: block
+	width: auto !important
+	min-width: 140px !important	
+	@media (min-width: 576px)
+		max-width: 280px !important
+	.select2-selection--single
+		background: $color-white
+		border: 1px solid $color-placeholder
+		padding-left: 16px
+		padding-right: 26px
+		transition: $transition
+		height: 40px
+		&:focus
+			box-shadow: 0 0 0 .25rem rgba(68, 15, 207,.1)
+		.select2-selection__rendered
+			padding-left: 0
+			padding-right: 0
+	.selection
+		display: block
+.select2-container--default .select2-selection--single
+	border-radius: 8px !important
+	.select2-selection__rendered, .select2-selection__placeholder
+		color: $color-dark
+		line-height: 38px
+		font-size: 14px
+	.select2-selection__clear
+		display: none
+	.select2-selection__arrow
+		height: 5px
+		width: 8px
+		right: 12px
+		top: 50%
+		transform: translateY(-50%)
+		background-image: url(../img/arrow-select.svg)
+		background-size: cover
+		b 
+			display: none
+.select2-container--open 
+	.select2-dropdown
+		border: 1px solid $color-placeholder
+		border-radius: 8px
+		overflow: hidden
+		top: 16px
+		padding: 0
+		.select2-search--dropdown
+			display: none
+		.select2-results
+			.select2-results__options
+				max-height: 100px
+				&::-webkit-scrollbar
+					width: 4px
+					height: 4px
+				&::-webkit-scrollbar-track
+					background-color: transparent
+					border-radius: 2px
+				&::-webkit-scrollbar-thumb
+					background-color: $color-body
+					border-radius: 2px	
+				.select2-results__option
+					font-size: 14px
+					padding: 4px 16px
+					color: $color-count
+					background-color: transparent
+				.select2-results__option--highlighted.select2-results__option--selectable
+					background: transparent
+					&:hover, &.select2-results__option--selected, &.select2-results__option--highlighted.select2-results__option--selectable
+						background-color: $color-body
+
+// STEPS 
+
+.step-2, .step-3, .step-4, .step-5, .step-6, .step-7, .step-8, .step-9
+	display: none
+
+@for $i from 2 through 9
+	.step-#{$i}-active
+		.progress-line
+			&:before
+				width: percentage($i/9)
+		.steps
+			.step-#{$i - 1}
+				display: none
+			.step-#{$i}
+				display: flex
+
+// AUDIO RECORDER
+
+.textarea-box
+	.message
+		text-align: center
+		background: $color-lightviolet2
+		border-radius: 100px
+		font-size: 10px
+		padding: 4px 16px
+		margin-bottom: 16px
+		&.orange 
+			background: #FFEBDC
+		&.red 
+			background: #FFDCDC
+
+.dropdown-media
+	.dropdown-toggle
+		display: inline-block
+		border: 1px solid $color-violet
+		border-radius: 8px
+		padding: 8px 16px
+		height: 42px
+		font-size: 14px
+		line-height: 22px
+		background: $color-white
+		svg path 
+			transition: $transition
+		&:hover
+			opacity: 1
+			color: $color-white !important
+			background: $color-violet2 !important
+			svg path 
+				fill: $color-white
+		&:after 
+			display: none
+		&.show 
+			background: #EDE7FB
+	.dropdown-menu
+		margin-top: 0
+		min-width: 100%
+		border-color: #838BAD
+		border-radius: 8px
+		.dropdown-item
+			padding: 4px 16px
+			color: #4E5778
+			font-size: 14px
+			&:hover, &:active, &:focus
+				background-color: #F4F4F5
+				opacity: 1
+
+.audio-recording
+	background: $color-white
+	border-radius: 8px
+	padding: 8px 16px
+	&.orange
+		#recordTimeDisplay
+			.limit
+				color: #FF6B00
+	&.red
+		#recordTimeDisplay
+			.limit
+				color: $color-red
+
+.audiorecorder
+	> [class*='col']
+		@media (min-width: 576px)
+			&:first-child
+				border-right: 1px solid $color-progress
+			&:last-child
+				border-left: 1px solid $color-progress
+
+.btn-delete, .btn-transform
+	svg path 
+		transition: $transition
+	&:hover 
+		opacity: 1
+		svg path 
+			fill: $color-violet
+
+.btn-record, .btn-play, .btn-transform, .btn-delete
+	width: 20px
+	height: 20px
+	display: inline-block
+	text-align: center 
+	line-height: 20px
+	font-size: 0
+
+#waveform
+	cursor: pointer
+
+#recordTimeDisplay, #playTimeDisplay
+	font-size: 14px
+	span
+		font-weight: bold !important
+
+.range 
+	width: 100%
+	height: 10px
+	-webkit-appearance: none
+	background: $color-border
+	outline: none
+	border-radius: 15px
+	overflow: hidden
+	pointer-events: none
+
+.range::-webkit-slider-thumb 
+	-webkit-appearance: none
+	width: 10px
+	height: 10px
+	border-radius: 50%
+	background: $color-body
+	box-shadow: -407px 0 0 400px $color-violet2
+
+// MODAL AUDIO
+
+.modal-audio
+	@media (max-width: 575.98px)
+		&.fade 
+			.modal-dialog
+				transform: translate(0, 100%) 
+		&.show 
+			.modal-dialog
+				transform: translate(0, 0)
+		.modal-dialog
+			margin: auto 0 0 0	
+			min-height: 100vh
+	.modal-content
+		padding: 40px
+		text-align: center
+		border: 0
+		@media (max-width: 575.98px)
+			border-radius: 8px 8px 0 0
+			margin-top: auto
+		.icon-box
+			display: flex 
+			position: relative
+			width: 200px
+			height: 200px
+			margin: 0 auto
+			margin-bottom: 40px
+			.icon-box-inside
+				margin: auto
+				width: 120px
+				height: 120px
+				line-height: 120px
+				background: rgba(242, 237, 255, 1)
+				border-radius: 100px
+				position: relative
+				z-index: 3
+				&:before, &:after 
+					content: "" 
+					position: absolute
+					border-radius: 100px
+					transition: $transition
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+				&:before 
+					width: 160px
+					height: 160px
+					background: rgba(242, 237, 255, 0.6)
+					z-index: -1
+					animation: color-point 5s infinite 
+				&:after 
+					width: 200px
+					height: 200px
+					background: rgba(242, 237, 255, 0.4)
+					z-index: 1
+					animation: color-point 5s infinite 
+
+@keyframes color-point
+	0%
+		opacity: 0
+	33%
+		opacity: 0.5
+	50%
+		opacity: 1
+	75%
+		opacity: 0.5
+	100%
+		opacity: 0
+    
+// VIDEO RECORDING
+
+.video-recording
+	position: relative
+	.video-js
+		background: $color-body
+		border-radius: 8px
+		border: 1px solid $color-border
+		overflow: hidden
+		.vjs-device-button
+			background-color: transparent 
+			background-image: url(../img/camera.svg)
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			width: 48px
+			height: 48px
+			margin: 0
+			transform: translate(-50%, -50%)
+			&:before 
+				display: none
+			&:hover 
+				opacity: 0.8
+		.vjs-control-bar
+			color: $color-lightviolet
+			height: auto
+			background: $color-white
+			@media (min-width: 576px)
+				padding: 16px 
+				font-size: 12px
+			button 
+				transition: $transition
+				&:hover 
+					color: $color-violet2
+			.vjs-volume-panel
+				.vjs-volume-control
+					.vjs-volume-level
+						background: $color-violet2
+			.vjs-current-time, .vjs-time-divider, .vjs-duration
+				padding-left: 2px
+				padding-right: 2px
+				min-width: auto
+			.vjs-play-progress
+				background: $color-violet2
+
+.video-delete, .upload__img-delete, .upload__img-play
+	position: absolute
+	top: 12px
+	left: 12px
+	background: $color-white 
+	border-radius: 100px
+	width: 28px
+	height: 28px
+	border: 1px solid $color-border
+	text-align: center 
+	line-height: 23px
+	cursor: pointer
+	svg path 
+		transition: $transition
+	&:hover
+		svg path 
+			fill: $color-violet2
+
+// VALIDATION
+
+label
+	&.error
+		color: $color-red
+		font-size: 12px
+		padding-left: 20px
+		padding-right: 40px
+		position: relative
+		&:before 
+			content: ''
+			position: absolute 
+			left: 0
+			top: 0
+			width: 16px
+			height: 16px
+			background-image: url(../img/validation.svg)
+			background-position: center center
+			background-repeat: no-repeat
+
+// IMAGES UPLOADING 
+
+.images-uploading
+	.upload__box
+		.upload__btn-box
+			border: 1px solid $color-placeholder
+			border-radius: 8px
+			text-align: center
+			overflow: hidden
+			.upload__inputfile
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				opacity: 0
+				cursor: pointer
+			.upload__btn
+				position: relative
+				transition: $transition
+				&:hover 
+					opacity: .8
+				.upload-img
+					padding: 10px
+					display: flex 
+					height: 110px
+					img 
+						margin: auto
+		.upload__img-box
+			flex: 0 0 auto
+			width: 33.33333333%
+			padding: 0 10px
+			margin-bottom: 20px
+			position: relative
+			text-align: center
+			order: -1 !important
+			@media (max-width: 575.98px)
+				width: 50%
+			&:hover
+				@media (min-width: 1200px)
+					.upload__img-delete, .upload__img-play
+						opacity: 1
+						pointer-events: initial
+					.magnific-popup
+						&:after 
+							opacity: 1
+			.upload__img-bottom
+				@media (max-width: 1199.98px)
+					background: $color-lightviolet2
+					height: 36px
+					border-radius: 0 0 8px 8px
+			.magnific-popup
+				height: 110px
+				position: relative
+				display: block
+				border-radius: 8px
+				border: 1px solid $color-placeholder
+				overflow: hidden
+				@media (max-width: 1199.98px)
+					border-radius: 8px 8px 0 0
+				&:after 
+					content: ''
+					position: absolute
+					transition: $transition
+					top: 0
+					left: 0
+					right: 0
+					bottom: 0
+					background: rgba(101, 57, 217, 0.5)
+					opacity: 0
+				&:hover 
+					opacity: 1
+				.img-bg 
+					background-repeat: no-repeat
+					background-position: center center
+					background-size: cover
+					position: relative
+					height: 100%
+			.upload__img-delete, .upload__img-play
+				top: auto
+				bottom: 4px
+				transition: $transition
+				@media (min-width: 1200px)
+					opacity: 0
+					pointer-events: none
+					top: 50%
+					bottom: auto
+					transform: translateY(-50%)
+					&:hover 
+						opacity: 1
+						pointer-events: initial
+			.upload__img-delete
+				left: 16px
+			.upload__img-play
+				right: 16px
+				left: auto
+
+// MAGNIFIC POPUP
+
+.mfp-bg 
+	background: $color-dark
+.mfp-container
+	width: 40%
+	height: auto
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	@media (max-width: 575.98px)
+		width: 100%
+	.mfp-arrow
+		background-position: center center
+		background-repeat: no-repeat
+		margin-top: 0
+		width: 24px
+		height: 24px
+		transition: $transition
+		top: auto
+		bottom: 16px
+		&:before, &:after 
+			display: none !important
+		&.mfp-arrow-right
+			right: 24px
+			background-image: url(../img/arrow-white-right.svg)
+			@media (max-width: 575.98px)
+				right: 22px
+		&.mfp-arrow-left
+			left: auto
+			right: 60px
+			background-image: url(../img/arrow-white-left.svg)
+			@media (max-width: 575.98px)
+				right: 48px
+	.mfp-content
+		border-radius: 8px
+		.mfp-figure
+			&:after
+				top: 0
+				border-radius: 8px
+				left: 0
+				bottom: 0
+				right: 0
+				position: absolute
+				z-index: 2
+				background: linear-gradient(to bottom, #030303 0%, transparent 30%, transparent 70%, #030303 100%)
+		.mfp-img
+			padding: 0
+			border-radius: 8px
+		.mfp-close
+			right: 16px
+			padding: 3px
+			color: $color-white
+			transition: $transition
+			cursor: pointer !important
+			width: auto
+		.mfp-bottom-bar
+			bottom: 0
+			z-index: 3
+			.mfp-counter
+				left: 24px
+				right: auto
+				font-size: 14px
+				color: $color-white
+
+.modal-delete
+	@media (max-width: 575.98px)
+		&.fade 
+			.modal-dialog
+				transform: translate(0, 100%) 
+		&.show 
+			.modal-dialog
+				transform: translate(0, 0)
+		.modal-dialog
+			margin: auto 0 0 0	
+			min-height: 100vh
+	.modal-content
+		padding: 32px
+		text-align: center
+		border: 0
+		@media (max-width: 575.98px)
+			border-radius: 8px 8px 0 0
+			margin-top: auto
+			padding: 32px 20px 40px
+		.icon-box
+			display: flex
+			border-radius: 100px
+			background: $color-lightviolet2
+			padding: 28px
+			width: 120px
+			height: 120px
+			margin: 0 auto 20px
