@@ -30,6 +30,9 @@ body
 		min-height: 100vh
 		display: flex 
 		flex-direction: column
+	&.hidden
+		@media (max-width: 767.98px)
+			overflow: hidden
 
 a 
 	text-decoration: none !important
@@ -52,6 +55,13 @@ a
 	@media (max-width: 575.98px)
 		padding-left: 20px
 		padding-right: 20px
+
+.row-4
+	margin-left: -4px
+	margin-right: -4px
+	> [class*='col']
+		padding-left: 4px
+		padding-right: 4px
 
 .row-6
 	margin-left: -6px
@@ -79,6 +89,8 @@ a
 
 .fz-0
 	font-size: 0px !important
+.fz-12
+	font-size: 12px !important
 .fz-14
 	font-size: 14px !important
 
@@ -781,12 +793,21 @@ input[type=number]
 			fill: $color-violet
 
 .btn-record, .btn-play, .btn-transform, .btn-delete
-	width: 20px
+	// width: 20px
 	height: 20px
 	display: inline-block
 	text-align: center 
 	line-height: 20px
 	font-size: 0
+	span, svg
+		vertical-align: middle
+	.span-delete
+		font-size: 14px
+		color: $color-count
+	.span-submit
+		font-size: 14px
+		color: $color-violet2
+		font-weight: bold
 
 #waveform
 	cursor: pointer
@@ -1155,3 +1176,233 @@ label
 			width: 120px
 			height: 120px
 			margin: 0 auto 20px
+
+// CHATBOT
+
+.dropdown-chatbot
+	position: fixed
+	bottom: 20px
+	right: 20px
+	.dropdown-toggle
+		display: inline-block
+		cursor: pointer
+		z-index: 1030
+		width: 48px
+		height: 48px
+		transition: $transition
+		border-radius: 8px
+		background-color: $color-violet
+		background-image: url(../img/chatbot-message.svg)
+		background-position: center center
+		background-repeat: no-repeat
+		&:hover
+			opacity: 1
+			background-color: $color-violet2
+		&[aria-expanded="true"]
+			background-image: url(../img/chatbot-cross.svg)
+			background-color: $color-lightviolet2
+			&:hover
+				opacity: .8
+				background-color: $color-lightviolet2
+		&:after 
+			display: none
+	.dropdown-menu 
+		transform: translate(0px, -74px) !important
+		width: 400px
+		height: 620px
+		padding: 0
+		overflow: hidden
+		background: $color-white
+		border: 1px solid $color-border
+		border-radius: 16px
+		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05)
+		@media (max-width: 767.98px)
+			position: fixed !important
+			width: 100%
+			height: 100%
+			transform: translate(0px, 0px) !important
+			border-radius: 0
+			border: 0
+
+.header-chatbot
+	background: $color-violet
+	color: $color-white
+	font-size: 14px
+	border-radius: 0 0 16px 16px
+	padding: 16px 20px
+	.header-title
+		font-weight: bold
+		font-size: 20px
+		line-height: 1.2
+	.header-logo
+		width: 40px
+		height: 40px
+		border-radius: 8px
+		background: $color-white
+		text-align: center 
+		line-height: 38px
+	.header-comment
+		margin-left: 56px
+		color: #CCB8FF
+		.sign-in
+			color: #F2EDFF
+			text-transform: uppercase 
+	.chatbot-close 
+		transition: $transition
+		display: inline-block
+		width: 9px
+		height: 9px
+		background-image: url(../img/alert-close.svg)
+		background-position: center center
+		background-repeat: no-repeat
+		padding: 4px
+		&:focus 
+			box-shadow: none
+
+.dropdown-chatbot
+	.chatbot-main
+		display: flex 
+		flex-direction: column
+		height: 100%
+		.message-section
+			padding: 16px 20px
+			flex-grow: 1
+			overflow: auto
+			&::-webkit-scrollbar
+				width: 4px
+				height: 4px
+			&::-webkit-scrollbar-track
+				background-color: transparent
+				border-radius: 2px
+			&::-webkit-scrollbar-thumb
+				background-color: $color-lightviolet2
+				border-radius: 2px
+
+.message-chatbot, .message-user
+	margin-bottom: 24px
+	.title 
+		color: $color-dark
+		font-weight: bold
+		margin-bottom: 12px
+		.title-logo
+			width: 20px
+			height: 20px
+			border-radius: 4px
+			background: $color-violet
+			text-align: center 
+			line-height: 16px
+			img 
+				width: 12px
+	.message 
+		display: inline-block 
+		border-radius: 8px
+		padding: 8px 12px
+		font-size: 14px
+		margin-bottom: 8px
+
+.message-chatbot
+	.message
+		background: $color-lightviolet2
+		color: $color-dark
+
+.animation-thinking
+	padding: 8px 12px
+	span
+		display: inline-block
+		margin: 2px 0
+		width: 8px 
+		height: 8px
+		border-radius: 100px
+		background: $color-lightviolet
+		animation: color-point 1.4s infinite both
+		&:nth-child(1)
+			animation-delay: 0s
+		&:nth-child(2)
+			animation-delay: .2s
+		&:nth-child(3)
+			animation-delay: .4s
+
+@keyframes color-point
+	0%
+		opacity: .33
+	20%
+		opacity: 1
+	100%
+		opacity: .33
+
+.animation-transform
+	width: 75%
+	.animation-box
+		display: flex
+		flex-direction: column
+		.progress
+			height: 8px
+			border-radius: 100px
+			&:first-child
+				margin-bottom: 8px
+			&:nth-child(2)
+				width: 50%
+				margin-left: auto
+			.progress-bar
+				background-color: #744DDD
+
+.message-user
+	text-align: right
+	.message
+		background: $color-violet
+		color: $color-white
+
+.like-box
+	font-size: 12px
+	color: $color-count
+	margin-bottom: 24px
+	.radio-group
+		input
+			display: none
+			~ span
+				cursor: pointer
+				svg path 
+					transition: $transition
+			&:checked, &:hover
+				~ span
+					svg path 
+							fill: $color-violet2
+
+.bottom-box
+	padding: 12px 20px  
+
+.type-box
+	position: relative
+	margin-bottom: 8px
+
+.input-chatbot
+	font-size: 14px
+	padding: 8px 80px 8px 16px
+	border: 0
+	border-radius: 8px
+	height: 56px
+	background: $color-lightviolet2
+	color: $color-dark
+	&::-webkit-input-placeholder
+		color: $color-placeholder
+	&::-moz-placeholder
+		color: $color-placeholder
+	&:-ms-input-placeholder
+		color: $color-placeholder
+	&:focus
+		box-shadow: none
+		background: $color-lightviolet2
+
+.chatbot-record, .chatbot-send
+	position: absolute
+	right: 18px
+	top: 50%
+	transform: translateY(-50%)
+
+.text-delete
+	position: absolute
+	right: 58px
+	top: 50%
+	transform: translateY(-50%)
+	img 
+		width: 10px
