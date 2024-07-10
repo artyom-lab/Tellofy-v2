@@ -1335,16 +1335,26 @@ label
 	.animation-box
 		display: flex
 		flex-direction: column
-		.progress
+		.loading
+			width: 100%
 			height: 8px
 			border-radius: 100px
+			background: linear-gradient(to right, transparent 0%, #744DDD 40%)
+			margin-left: auto
 			&:first-child
 				margin-bottom: 8px
+				animation: width linear infinite 4s
 			&:nth-child(2)
-				width: 50%
-				margin-left: auto
-			.progress-bar
-				background-color: #744DDD
+				width: 70%
+				animation: width-2 linear infinite 4s
+
+@keyframes width
+	50%
+		width: 50%
+
+@keyframes width-2
+	50%
+		width: 35%
 
 .message-user
 	text-align: right
