@@ -14,6 +14,9 @@ $color-placeholder: #838BAD
 $color-border: #C4C9D9
 $color-red: #FF3E4A
 $color-progress: #E1E5F0
+$color-svg: #CCB8FF
+$color-darkmode: #333A52
+$color-darkmode2: #8663E2
 
 *
 	outline: none !important
@@ -33,6 +36,8 @@ body
 	&.hidden
 		@media (max-width: 767.98px)
 			overflow: hidden
+	&.dark-mode 
+		background-color: $color-dark
 
 a 
 	text-decoration: none !important
@@ -345,6 +350,10 @@ a
 		font-size: 12px
 	.link-brand
 		color: $color-violet2
+	.dark-mode &
+		color: $color-border
+		.link-brand
+			color: $color-darkmode2
 
 .form-textarea 
 	height: 220px !important
@@ -749,7 +758,7 @@ input[type=number]
 		&:after 
 			display: none
 		&.show 
-			background: #EDE7FB
+			background: $color-lightviolet2
 	.dropdown-menu
 		margin-top: 0
 		min-width: 100%
@@ -757,7 +766,7 @@ input[type=number]
 		border-radius: 8px
 		.dropdown-item
 			padding: 4px 16px
-			color: #4E5778
+			color: $color-count
 			font-size: 14px
 			&:hover, &:active, &:focus
 				background-color: #F4F4F5
@@ -767,6 +776,8 @@ input[type=number]
 	background: $color-lightviolet2
 	border-radius: 8px
 	padding: 8px 16px
+	.dark-mode &
+		background: $color-darkmode
 	&.orange
 		#recordTimeDisplay
 			.limit
@@ -774,19 +785,13 @@ input[type=number]
 	&.red
 		#recordTimeDisplay
 			.limit
-				color: $color-red
-
-.audiorecorder
-	> [class*='col']
-		@media (min-width: 576px)
-			&:first-child
-				border-right: 1px solid $color-progress
-			&:last-child
-				border-left: 1px solid $color-progress
+				color: #FF3E4A
 
 .btn-delete, .btn-transform
 	svg path 
 		transition: $transition
+		.dark-mode &
+			fill: $color-svg
 	&:hover 
 		opacity: 1
 		svg path 
@@ -804,16 +809,24 @@ input[type=number]
 	.span-delete
 		font-size: 14px
 		color: $color-count
+		.dark-mode &
+			color: $color-progress
 	.span-submit
 		font-size: 14px
 		color: $color-violet2
 		font-weight: bold
+		.dark-mode &
+			color: $color-darkmode2
 
 #waveform
 	cursor: pointer
-
+ 
 #recordTimeDisplay, #playTimeDisplay
 	font-size: 14px
+	.dark-mode &
+		color: $color-white
+		.limit
+			color: $color-lightviolet
 	span
 		font-weight: bold !important
 
@@ -826,6 +839,8 @@ input[type=number]
 	border-radius: 15px
 	overflow: hidden
 	pointer-events: none
+	.dark-mode &
+		background: $color-lightviolet
 
 .range::-webkit-slider-thumb 
 	-webkit-appearance: none
@@ -1204,6 +1219,10 @@ label
 			&:hover
 				opacity: .8
 				background-color: $color-lightviolet2
+			.dark-mode &
+				background-color: $color-darkmode
+				&:hover
+					background-color: $color-darkmode
 		&:after 
 			display: none
 	.dropdown-menu 
@@ -1216,6 +1235,9 @@ label
 		border: 1px solid $color-border
 		border-radius: 16px
 		box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05)
+		.dark-mode &
+			border-color: $color-placeholder
+			background: $color-dark
 		@media (max-width: 767.98px)
 			position: fixed !important
 			width: 100%
@@ -1243,7 +1265,7 @@ label
 		line-height: 38px
 	.header-comment
 		margin-left: 56px
-		color: #CCB8FF
+		color: $color-svg
 		.sign-in
 			color: #F2EDFF
 			text-transform: uppercase 
@@ -1277,6 +1299,8 @@ label
 			&::-webkit-scrollbar-thumb
 				background-color: $color-lightviolet2
 				border-radius: 2px
+				.dark-mode &
+					background-color: $color-darkmode
 
 .message-chatbot, .message-user
 	margin-bottom: 24px
@@ -1284,6 +1308,8 @@ label
 		color: $color-dark
 		font-weight: bold
 		margin-bottom: 12px
+		.dark-mode &
+			color: $color-white
 		.title-logo
 			width: 20px
 			height: 20px
@@ -1304,6 +1330,9 @@ label
 	.message
 		background: $color-lightviolet2
 		color: $color-dark
+		.dark-mode &
+			background: $color-darkmode
+			color: $color-white
 
 .animation-thinking
 	padding: 8px 12px
@@ -1402,17 +1431,57 @@ label
 	&:focus
 		box-shadow: none
 		background: $color-lightviolet2
+	.dark-mode &
+		background: $color-darkmode
+		color: $color-white
+		&::-webkit-input-placeholder
+			color: $color-border
+		&::-moz-placeholder
+			color: $color-border
+		&:-ms-input-placeholder
+			color: $color-border
 
-.chatbot-record, .chatbot-send
+.chatbot-record, .chatbot-send, .text-delete
 	position: absolute
 	right: 18px
 	top: 50%
 	transform: translateY(-50%)
+	.dark-mode &
+		svg path 
+			fill: $color-svg
 
 .text-delete
-	position: absolute
 	right: 58px
-	top: 50%
-	transform: translateY(-50%)
-	img 
-		width: 10px
+
+// SWITCHER
+
+.switch-wrap
+	display: flex
+	cursor: pointer
+	.lever
+		position: relative
+		width: 1.75rem
+		height: 1rem
+		border-radius: 100px
+		border-color: $color-white
+		background-color: $color-lightviolet
+		&:after
+			content: ""
+			position: absolute
+			width: 12px
+			height: 12px
+			margin-top: -6px
+			background-color: $color-white
+			border-radius: 100px
+			left: 2px
+			top: 50%
+			transition: $transition
+	input
+		opacity: 0
+		width: 0
+		height: 0
+		position: absolute
+		&:checked ~ .lever
+			background-color: $color-violet
+			&:after
+				left: 14px

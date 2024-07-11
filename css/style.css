@@ -18,6 +18,8 @@ body {
   @media (max-width: 767.98px) {
     body.hidden {
       overflow: hidden; } }
+  body.dark-mode {
+    background-color: #1D253F; }
 
 a {
   text-decoration: none !important;
@@ -339,6 +341,10 @@ a {
       font-size: 12px; } }
   .copywright .link-brand {
     color: #440FCF; }
+  .dark-mode .copywright {
+    color: #C4C9D9; }
+    .dark-mode .copywright .link-brand {
+      color: #8663E2; }
 
 .form-textarea {
   height: 220px !important;
@@ -783,19 +789,17 @@ input::-webkit-inner-spin-button {
   background: #EDE7FB;
   border-radius: 8px;
   padding: 8px 16px; }
+  .dark-mode .audio-recording {
+    background: #333A52; }
   .audio-recording.orange #recordTimeDisplay .limit {
     color: #FF6B00; }
   .audio-recording.red #recordTimeDisplay .limit {
     color: #FF3E4A; }
 
-@media (min-width: 576px) {
-  .audiorecorder > [class*='col']:first-child {
-    border-right: 1px solid #E1E5F0; }
-  .audiorecorder > [class*='col']:last-child {
-    border-left: 1px solid #E1E5F0; } }
-
 .btn-delete svg path, .btn-transform svg path {
   transition: 0.3s; }
+  .dark-mode .btn-delete svg path, .dark-mode .btn-transform svg path {
+    fill: #CCB8FF; }
 .btn-delete:hover, .btn-transform:hover {
   opacity: 1; }
   .btn-delete:hover svg path, .btn-transform:hover svg path {
@@ -812,16 +816,24 @@ input::-webkit-inner-spin-button {
   .btn-record .span-delete, .btn-play .span-delete, .btn-transform .span-delete, .btn-delete .span-delete {
     font-size: 14px;
     color: #4E5778; }
+    .dark-mode .btn-record .span-delete, .dark-mode .btn-play .span-delete, .dark-mode .btn-transform .span-delete, .dark-mode .btn-delete .span-delete {
+      color: #E1E5F0; }
   .btn-record .span-submit, .btn-play .span-submit, .btn-transform .span-submit, .btn-delete .span-submit {
     font-size: 14px;
     color: #440FCF;
     font-weight: bold; }
+    .dark-mode .btn-record .span-submit, .dark-mode .btn-play .span-submit, .dark-mode .btn-transform .span-submit, .dark-mode .btn-delete .span-submit {
+      color: #8663E2; }
 
 #waveform {
   cursor: pointer; }
 
 #recordTimeDisplay, #playTimeDisplay {
   font-size: 14px; }
+  .dark-mode #recordTimeDisplay, .dark-mode #playTimeDisplay {
+    color: #FFF; }
+    .dark-mode #recordTimeDisplay .limit, .dark-mode #playTimeDisplay .limit {
+      color: #AF91FF; }
   #recordTimeDisplay span, #playTimeDisplay span {
     font-weight: bold !important; }
 
@@ -834,6 +846,8 @@ input::-webkit-inner-spin-button {
   border-radius: 15px;
   overflow: hidden;
   pointer-events: none; }
+  .dark-mode .range {
+    background: #AF91FF; }
 
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -1194,6 +1208,10 @@ label.error {
       .dropdown-chatbot .dropdown-toggle[aria-expanded="true"]:hover {
         opacity: 0.8;
         background-color: #EDE7FB; }
+      .dark-mode .dropdown-chatbot .dropdown-toggle[aria-expanded="true"] {
+        background-color: #333A52; }
+        .dark-mode .dropdown-chatbot .dropdown-toggle[aria-expanded="true"]:hover {
+          background-color: #333A52; }
     .dropdown-chatbot .dropdown-toggle:after {
       display: none; }
   .dropdown-chatbot .dropdown-menu {
@@ -1206,6 +1224,9 @@ label.error {
     border: 1px solid #C4C9D9;
     border-radius: 16px;
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.05); }
+    .dark-mode .dropdown-chatbot .dropdown-menu {
+      border-color: #838BAD;
+      background: #1D253F; }
     @media (max-width: 767.98px) {
       .dropdown-chatbot .dropdown-menu {
         position: fixed !important;
@@ -1267,6 +1288,8 @@ label.error {
     .dropdown-chatbot .chatbot-main .message-section::-webkit-scrollbar-thumb {
       background-color: #EDE7FB;
       border-radius: 2px; }
+      .dark-mode .dropdown-chatbot .chatbot-main .message-section::-webkit-scrollbar-thumb {
+        background-color: #333A52; }
 
 .message-chatbot, .message-user {
   margin-bottom: 24px; }
@@ -1274,6 +1297,8 @@ label.error {
     color: #1D253F;
     font-weight: bold;
     margin-bottom: 12px; }
+    .dark-mode .message-chatbot .title, .dark-mode .message-user .title {
+      color: #FFF; }
     .message-chatbot .title .title-logo, .message-user .title .title-logo {
       width: 20px;
       height: 20px;
@@ -1293,6 +1318,9 @@ label.error {
 .message-chatbot .message {
   background: #EDE7FB;
   color: #1D253F; }
+  .dark-mode .message-chatbot .message {
+    background: #333A52;
+    color: #FFF; }
 
 .animation-thinking {
   padding: 8px 12px; }
@@ -1385,19 +1413,56 @@ label.error {
   .input-chatbot:focus {
     box-shadow: none;
     background: #EDE7FB; }
+  .dark-mode .input-chatbot {
+    background: #333A52;
+    color: #FFF; }
+    .dark-mode .input-chatbot::-webkit-input-placeholder {
+      color: #C4C9D9; }
+    .dark-mode .input-chatbot::-moz-placeholder {
+      color: #C4C9D9; }
+    .dark-mode .input-chatbot:-ms-input-placeholder {
+      color: #C4C9D9; }
 
-.chatbot-record, .chatbot-send {
+.chatbot-record, .chatbot-send, .text-delete {
   position: absolute;
   right: 18px;
   top: 50%;
   transform: translateY(-50%); }
+  .dark-mode .chatbot-record svg path, .dark-mode .chatbot-send svg path, .dark-mode .text-delete svg path {
+    fill: #CCB8FF; }
 
 .text-delete {
-  position: absolute;
-  right: 58px;
-  top: 50%;
-  transform: translateY(-50%); }
-  .text-delete img {
-    width: 10px; }
+  right: 58px; }
+
+.switch-wrap {
+  display: flex;
+  cursor: pointer; }
+  .switch-wrap .lever {
+    position: relative;
+    width: 1.75rem;
+    height: 1rem;
+    border-radius: 100px;
+    border-color: #FFF;
+    background-color: #AF91FF; }
+    .switch-wrap .lever:after {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      margin-top: -6px;
+      background-color: #FFF;
+      border-radius: 100px;
+      left: 2px;
+      top: 50%;
+      transition: 0.3s; }
+  .switch-wrap input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute; }
+    .switch-wrap input:checked ~ .lever {
+      background-color: #6539D9; }
+      .switch-wrap input:checked ~ .lever:after {
+        left: 14px; }
 
 /*# sourceMappingURL=style.css.map */

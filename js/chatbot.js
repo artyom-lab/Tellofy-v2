@@ -64,3 +64,15 @@ document.querySelector('.btn-delete').addEventListener('click', function() {
   document.querySelector('.audio-recording').classList.add('d-none');
   document.querySelector('.type-box').classList.remove('d-none');
 });
+
+// DARKMODE
+document.getElementById('dark-mode').addEventListener('change', function() {
+  var darkModeSwitch = document.getElementById('dark-mode');
+  var body = document.body;
+
+  if (darkModeSwitch.checked) {
+    body.classList.add('dark-mode');
+  } else {
+    body.classList.remove('dark-mode');
+  }
+});
